@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Alzheimer’s Prediction</title>
@@ -12,7 +13,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: #f4f6f9;
+      background: url("{{ url_for('static', filename='pexels_shvetsa.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Poppins', sans-serif;
     }
 
@@ -26,9 +28,10 @@
       background: #fff;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
       width: 100%;
-      max-width: 850px;  /* Wider to fit image + result */
+      max-width: 850px;
+      /* Wider to fit image + result */
     }
 
     .card {
@@ -42,6 +45,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Alzheimer’s Stage Prediction</h1>
@@ -59,9 +63,8 @@
       <div class="col-md-6 text-center">
         <div class="card shadow-sm border-0">
           <div class="card-body">
-            <img src="{{ url_for('static', filename=image_file) }}" 
-                 alt="Uploaded Image" class="img-fluid rounded" 
-                 style="max-height: 350px; object-fit: cover;">
+            <img src="{{ url_for('static', filename=image_file) }}" alt="Uploaded Image" class="img-fluid rounded"
+              style="max-height: 350px; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -80,4 +83,5 @@
   </div>
 
 </body>
+
 </html>
